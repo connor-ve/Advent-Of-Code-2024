@@ -2,6 +2,10 @@
 
 This year I will be using AoC to help me improve my skills with golang.
 
+I will be posting and updating my codebase every day to showcase a way to solve AoC using Golang.
+
+Link -> https://adventofcode.com/2024
+
 ## Progression
 
 | Day | Stars | Difficulty |
