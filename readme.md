@@ -38,21 +38,21 @@ How to read file line by line
 
 ```go
 // open the file
-	file, err := os.Open("input.txt")
-	if err != nil {
-		os.Exit(0)
-	}
-	defer file.Close()
+file, err := os.Open("input.txt")
+if err != nil {
+  os.Exit(0)
+}
+defer file.Close()
 
 // Use a scanner to go line by line
-  scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-    // inner logic by line
-    line := scanner.Text() // Grab the line
-		words := strings.Fields(line) // break down the words
-	}
+scanner := bufio.NewScanner(file)
+for scanner.Scan() {
+  // inner logic by line
+  line := scanner.Text() // Grab the line
+  words := strings.Fields(line) // break down the words
+}
 
-	if err := scanner.Err(); err != nil {
-		fmt.Println(err)
-	}
+if err := scanner.Err(); err != nil {
+  fmt.Println(err)
+}
 ```
