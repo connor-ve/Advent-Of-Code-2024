@@ -11,7 +11,7 @@ Link -> https://adventofcode.com/2024
 | Day | Stars | Difficulty |
 | --- | ----- | ---------- |
 | 1   | ⭐⭐  | 🧩         |
-| 2   |       |            |
+| 2   | ⭐⭐  | 🧩🧩       |
 | 3   |       |            |
 | 4   |       |            |
 | 5   |       |            |
@@ -59,4 +59,20 @@ for scanner.Scan() {
 if err := scanner.Err(); err != nil {
   fmt.Println(err)
 }
+```
+
+## Day 2 - Learned
+
+How to remove individual values in Golang
+
+```go
+// I previous was using this
+// If i wanted to remove i
+v = append(v[:i], v[i+1:]...)
+// This works but when iterating over each other I was getting repeated values
+
+// Creating a 1 instance smaller array and then appending values worked and was a much better solution.
+temp := make([]int, 0, len(v)-1)
+temp = append(temp, v[:i]...)
+temp = append(temp, v[i+1:]...)
 ```
