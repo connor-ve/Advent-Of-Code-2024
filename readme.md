@@ -1,4 +1,4 @@
-## Advent of Code 2024
+## Advent of Go (code-2024)
 
 This year I will be using AoC to help me improve my skills with golang.
 
@@ -35,6 +35,8 @@ Link -> https://adventofcode.com/2024
 | 23  |       |            |
 | 24  |       |            |
 | 25  |       |            |
+
+\* Solution was simple, but was unaware of the technology or library
 
 ## Day 1 - Learned
 
