@@ -12,7 +12,7 @@ Link -> https://adventofcode.com/2024
 | --- | ----- | ---------- |
 | 1   | ⭐⭐  | 🧩         |
 | 2   | ⭐⭐  | 🧩🧩       |
-| 3   |       |            |
+| 3   | ⭐⭐  | 🧩\*       |
 | 4   |       |            |
 | 5   |       |            |
 | 6   |       |            |
@@ -75,4 +75,26 @@ v = append(v[:i], v[i+1:]...)
 temp := make([]int, 0, len(v)-1)
 temp = append(temp, v[:i]...)
 temp = append(temp, v[i+1:]...)
+```
+
+## Day 3 - Learned
+
+That I need to learn Regexp. Through googling, I was able to piece together this regexp
+
+```go
+// Creating the Regexp
+r, _ := regexp.Compile(`mul\((\d*)?,(\d*)?\)`)
+// PartTwo with ors
+r, _ := regexp.Compile(`mul\((\d*)?,(\d*)?\)|do\(\)|don't\(\)`)
+
+// running it to get matches
+matches := r.FindAllStringSubmatch(s, -1)
+
+for _, match := range matches {
+  match[0]
+  match[1]
+  ...
+  // It appears out of index doesnt matter it will be null by default
+  // Returns as a string
+}
 ```
